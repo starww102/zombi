@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Plants VS Zombies</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		/* для гороха */
+		.peas {
+			width: 60px; 
+			position: absolute; 
+		}
+		/* для зомби */
+		.zombies {
+			width: 50px;
+			position: absolute;
+			transition: 1s;
+		}
+		/* счет */
+		.score {
+			position: absolute;
+			left: 550px;
+			top: 30px;
+		}
+		/* класс для кнопки */
+		.button {
+			position: absolute;
+			left: 530px;
+			top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" style="background-image: url(game.png); height: 657px; width: 1360px; background-size: 100% 100%">
+		<h5 class="score"></h5>
+    	<button class="btn btn-success button">Увеличить горох</button>
+		<!-- горох 5 шт. -->
+	  	<img class="peas" src="peashooter.png"  style="top: 190px; left: 400px;">
+		<img class="peas" src="peashooter.png"  style="top: 270px; left: 400px;">
+		<img class="peas" src="peashooter.png"  style="top: 360px; left: 400px;">
+		<img class="peas" src="peashooter.png"  style="top: 450px; left: 400px;">
+		<img class="peas" src="peashooter.png"  style="top: 530px; left: 400px;">
+		<!-- зомби 5 шт. -->
+		<img class="zombies" src="zombie1.png" style="top: 160px; left: 1100px;">
+		<img class="zombies" src="zombie2.png" style="top: 250px; left: 1100px;">
+		<img class="zombies" src="zombie2.png" style="top: 340px; left: 1100px;">
+		<img class="zombies" src="zombie3.png" style="top: 430px; left: 1100px;">
+		<img class="zombies" src="zombie3.png" style="top: 520px; left: 1100px;">
+	</div>
+	<script type="text/javascript">
+		/* Задание. При клике на кнопку "Увеличить горох" меняется атрибут src у всего гороха. */
+		let peas = document.querySelectorAll('.peas')
+		let btn = document.querySelector('.btn')
+		btn.onclick = function() {
+			for(i = 0; i<5; i = i+1)
+			peas[i].src = 'peashooter2.png'
+		}
+
+	</script>
+</body>
+</html>
+
